@@ -40,6 +40,7 @@ namespace RefactoredCoffeeBrewer
                 timer.Stop();
                 t.Stop();
                 obj.BeginBrewing();
+                System.Threading.Thread.Sleep(5000);
                 obj.EndBrewing();
             }
         }
