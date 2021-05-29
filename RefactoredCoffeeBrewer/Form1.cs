@@ -13,7 +13,8 @@ namespace RefactoredCoffeeBrewer
     public partial class Form1 : Form
     {
         System.Timers.Timer timer;
-        public DateTime dateOfBrewing;
+        Timer t = new Timer();
+        DateTime dateOfBrewing;
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +24,6 @@ namespace RefactoredCoffeeBrewer
         {
             timer.Start();
 
-            Timer t = new Timer();
             t.Interval = 500;
             t.Tick += new EventHandler(t_Tick);
             t.Start();
@@ -37,9 +37,12 @@ namespace RefactoredCoffeeBrewer
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            string coffeeDate = Convert.ToString(brewingDate.Value);
-            dateOfBrewing = DateTime.Parse(coffeeDate);
-            IMessage obj = new Brewing(dateOfBrewing);
+            //string coffeeDate = Convert.ToString(brewingDate.Value);
+            //dateOfBrewing = DateTime.Parse(coffeeDate);
+            //IMessage obj = new Brewing(dateOfBrewing);
+
+            dateOfBrewing = brewingDate.Value;
+            IMessage obj = new Brewing(brewingDate.Value);
 
 
             DateTime currentTime = DateTime.Now;
@@ -48,6 +51,7 @@ namespace RefactoredCoffeeBrewer
             if (currentTime.Hour == userTime.Hour && currentTime.Minute == userTime.Minute && currentTime.Second == userTime.Second)
             {
                 timer.Stop();
+                t.Stop();
                 obj.BeginBrewing();
                 obj.EndBrewing();
             }
