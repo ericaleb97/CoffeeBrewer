@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoredCoffeeBrewer", "RefactoredCoffeeBrewer\RefactoredCoffeeBrewer.csproj", "{EC0645A3-6874-4C01-B8EA-3F4177EA153A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC0645A3-6874-4C01-B8EA-3F4177EA153A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0645A3-6874-4C01-B8EA-3F4177EA153A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0645A3-6874-4C01-B8EA-3F4177EA153A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0645A3-6874-4C01-B8EA-3F4177EA153A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {123D17CB-B941-46B9-B13E-1182F9A85F6E}
+	EndGlobalSection
+EndGlobal
