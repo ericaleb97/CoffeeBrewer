@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RefactoredCoffeeBrewer
@@ -37,18 +30,12 @@ namespace RefactoredCoffeeBrewer
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            //string coffeeDate = Convert.ToString(brewingDate.Value);
-            //dateOfBrewing = DateTime.Parse(coffeeDate);
-            //IMessage obj = new Brewing(dateOfBrewing);
-
             dateOfBrewing = brewingDate.Value;
             IMessage obj = new Brewing(brewingDate.Value);
 
-
             DateTime currentTime = DateTime.Now;
-            DateTime userTime = brewingDate.Value;
 
-            if (currentTime.Hour == userTime.Hour && currentTime.Minute == userTime.Minute && currentTime.Second == userTime.Second)
+            if (currentTime.Hour == dateOfBrewing.Hour && currentTime.Minute == dateOfBrewing.Minute && currentTime.Second == dateOfBrewing.Second)
             {
                 timer.Stop();
                 t.Stop();
