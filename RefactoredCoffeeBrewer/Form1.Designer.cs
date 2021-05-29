@@ -32,12 +32,14 @@ namespace RefactoredCoffeeBrewer
             this.startTimer = new System.Windows.Forms.Button();
             this.timeRemaining = new System.Windows.Forms.TextBox();
             this.brewingDate = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startTimer
             // 
             this.startTimer.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.startTimer.Location = new System.Drawing.Point(199, 282);
+            this.startTimer.Location = new System.Drawing.Point(206, 253);
             this.startTimer.Name = "startTimer";
             this.startTimer.Size = new System.Drawing.Size(75, 46);
             this.startTimer.TabIndex = 0;
@@ -62,11 +64,34 @@ namespace RefactoredCoffeeBrewer
             this.brewingDate.Size = new System.Drawing.Size(200, 22);
             this.brewingDate.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(184, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Pick a time to brew";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(143, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(188, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Time remaining until brewing";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(495, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.brewingDate);
             this.Controls.Add(this.timeRemaining);
             this.Controls.Add(this.startTimer);
@@ -83,6 +108,8 @@ namespace RefactoredCoffeeBrewer
         private System.Windows.Forms.Button startTimer;
         private System.Windows.Forms.TextBox timeRemaining;
         private System.Windows.Forms.DateTimePicker brewingDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
