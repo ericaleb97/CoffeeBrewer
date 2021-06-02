@@ -7,6 +7,7 @@ namespace RefactoredCoffeeBrewer
     {
         System.Timers.Timer timer;
         Timer t = new Timer();
+        IMessage obj;
         DateTime dateOfBrewing;
         public Form1()
         {
@@ -31,7 +32,7 @@ namespace RefactoredCoffeeBrewer
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             dateOfBrewing = brewingDate.Value;
-            IMessage obj = new Brewing(brewingDate.Value);
+            obj = new Brewing(brewingDate.Value);
 
             DateTime currentTime = DateTime.Now;
 
@@ -50,6 +51,13 @@ namespace RefactoredCoffeeBrewer
             timer = new System.Timers.Timer();
             timer.Interval = 1000;
             timer.Elapsed += Timer_Elapsed;
+        }
+
+        private void stopTimer_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            t.Stop();
+            obj.StopBrewing();
         }
     }
 }

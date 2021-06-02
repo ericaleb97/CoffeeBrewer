@@ -34,6 +34,7 @@ namespace RefactoredCoffeeBrewer
             this.brewingDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.stopTimer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startTimer
@@ -84,12 +85,24 @@ namespace RefactoredCoffeeBrewer
             this.label2.Text = "Time remaining until brewing";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // stopTimer
+            // 
+            this.stopTimer.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.stopTimer.Location = new System.Drawing.Point(206, 320);
+            this.stopTimer.Name = "stopTimer";
+            this.stopTimer.Size = new System.Drawing.Size(75, 46);
+            this.stopTimer.TabIndex = 6;
+            this.stopTimer.Text = "Stop";
+            this.stopTimer.UseVisualStyleBackColor = true;
+            this.stopTimer.Click += new System.EventHandler(this.stopTimer_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(495, 450);
+            this.Controls.Add(this.stopTimer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.brewingDate);
@@ -110,6 +123,7 @@ namespace RefactoredCoffeeBrewer
         private System.Windows.Forms.DateTimePicker brewingDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button stopTimer;
     }
 }
 

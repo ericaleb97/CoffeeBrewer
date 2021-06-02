@@ -10,6 +10,7 @@ namespace RefactoredCoffeeBrewer
     {
         bool BeginBrewing();
         bool EndBrewing();
+        bool StopBrewing();
         DateTime brewDate { get; set; }
     }
 }

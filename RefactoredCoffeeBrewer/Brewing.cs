@@ -40,5 +40,11 @@ namespace RefactoredCoffeeBrewer
             MessageBox.Show("The coffee has finished brewing");
             return true;
         }
+
+        public bool StopBrewing()
+        {
+            MessageBox.Show("The brewing has been stopped.");
+            return true;
+        }
     }
 }
